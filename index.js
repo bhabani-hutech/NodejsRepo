@@ -61,9 +61,16 @@
 //   .listen(5000);
 
 // 2nd way
-const http = require("http");
-const serverData = (req, resp) => {
-  resp.write("<h1>Hello This is Bhabani Sahu</h1>");
-  resp.end();
-};
-http.createServer(serverData).listen(5000);
+// const http = require("http");
+// const serverData = (req, resp) => {
+//   resp.write("<h1>Hello This is Bhabani Sahu</h1>");
+//   resp.end();
+// };
+// http.createServer(serverData).listen(5000);
+
+// If we want to install any package we can directly import npm i <package name>
+
+// for continuing run the code we need to install nodemon
+// npm i nodemon -g
+
+// terminal - nodemon ./index.js
