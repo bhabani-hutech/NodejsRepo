@@ -43,8 +43,27 @@
 // Non-Global ------> To use which modules we have to import in top of the file
 // like - fs module , os module etc
 
-const fs = require("fs");
-fs.writeFileSync("hello.txt", "welcome to node"); // use to create a file named hello.txt and text or content as welcome to node
+// const fs = require("fs");
+// fs.writeFileSync("hello.txt", "welcome to node"); // use to create a file named hello.txt and text or content as welcome to node
 
-console.log(__dirname); //help to get the directory name- C:\Users\Dell\Documents\nodetut
-console.log(__filename); //help to get the file name- C:\Users\Dell\Documents\nodetut\index.js
+// console.log(__dirname); //help to get the directory name- C:\Users\Dell\Documents\nodetut
+// console.log(__filename); //help to get the file name- C:\Users\Dell\Documents\nodetut\index.js
+
+//Created a server throught node js
+
+// 1st way
+// const http = require("http");
+// http
+//   .createServer((req, resp) => {
+//     resp.write("<h1>Hello This is Bhabani</h1>");
+//     resp.end();
+//   })
+//   .listen(5000);
+
+// 2nd way
+const http = require("http");
+const serverData = (req, resp) => {
+  resp.write("<h1>Hello This is Bhabani Sahu</h1>");
+  resp.end();
+};
+http.createServer(serverData).listen(5000);
